@@ -12,8 +12,9 @@ app.use(cors());
 
 let PORT = process.env.PORT || 8080;
 
-app.get("/", (req, res)=>{
-    res.send("xhbczx");
+app.get("/", (req, res, next)=>{
+    //res.send("");
+    next();
 });
 
 
