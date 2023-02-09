@@ -13,8 +13,9 @@ app.use(cors());
 let PORT = process.env.PORT || 8080;
 
 // app.get("/", (req, res)=>{
-//     res.send("Heyy");
-// })
+//     res.send("xhbczx");
+// });
+
 
 
 // EndPoint To Save The User Booking Into Database
@@ -61,23 +62,23 @@ app.get("/api/booking", async (req, res) => {
 
 
 
+
 if (process.env.NODE_ENV == "production"){
 
-    app.use(express.static("client/build"));
-
-    const path = require("path");
-
-    app.get("*", (req, res) => {
-
-        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-
-    })
+    app.use(express.static("/client/build"));
 
 
+    // app.get("*", (req, res) => {
+
+    //     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+
+    // })
 }
 
+
+
 // Listening On PORT To Start The Server
-app.listen(process.env.PORT || 8080, "0.0.0.0", () => {
+app.listen(process.env.PORT || 8080, "127.0.0.1", () => {
     console.log("Express Server On Fire.. 🔥🔥");
 });
 
