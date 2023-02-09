@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import loadingGif from "/Users/rohanmote/Desktop/Thapa Projects/Mini Projects/BookMyShow_Capstone/Server/client/build/Images/LoadingGif.gif";
+import sorryImage from "/Users/rohanmote/Desktop/Thapa Projects/Mini Projects/BookMyShow_Capstone/Server/client/build/Images/sorry.png";
 
 const HomePage = () => {
 
@@ -31,7 +33,7 @@ const HomePage = () => {
     // Getting Response From "GET API" and updating the respective States
     const [responseMovieName, setResponseMovieName] = useState("");
     const [responseSlots, setResponseSlots] = useState({});
-    const [responseTimeSlot, setResponseTimeSlot] = useState("");
+    const [responseTimeSlot, setResponseTimeSlot] = useState(""); 
 
 
     // States To Display Different Colour On User Selection Of Movie Name & Time Slot
@@ -454,21 +456,21 @@ const HomePage = () => {
                 {
                     loader && <div className="flex w-full items-center justify-center h-1/2 flex-col gap-y-6">
                         <h1 className="text-xl font-bold text-center tracking-wider text-gray-700">Loading Booking Details..</h1>
-                        <img src="/images/LoadingGif.gif" className="w-28 h-16 rounded-xl"></img>
+                        <img src={loadingGif} className="w-28 h-16 rounded-xl"></img>
                     </div>
                 }
 
                 {
                     !loader && !bookMovie && <div className="bg-blue-300 p-4 h-fit flex flex-col gap-y-5 rounded-md shadow-2xl items-center">
                         <h1 className="text-2xl font-bold tracking-wide text-gray-700">No Previous Booking Found..</h1>
-                        <img src="/images/sorry.png" className="h-20 w-20"></img>
+                        <img src={sorryImage} className="h-20 w-20"></img>
                     </div>
                 }
 
                 {
                     emptyData && !loader && <div className="bg-blue-300 p-4 h-fit flex flex-col gap-y-5 rounded-md shadow-2xl items-center">
                         <h1 className="text-2xl font-bold tracking-wide text-gray-700">No Previous Booking Found..</h1>
-                        <img src="/images/sorry.png" className="h-20 w-20"></img>
+                        <img src={sorryImage} className="h-20 w-20"></img>
                     </div>
                 }
 
