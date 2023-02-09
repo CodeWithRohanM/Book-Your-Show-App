@@ -67,6 +67,7 @@ app.get("/api/booking", async (req, res) => {
 if (process.env.NODE_ENV == "production"){
 
     app.use(express.static(__dirname+ "/client/build"));
+    app.use(express.static(__dirname + "/client/build/images"));
 
 
     // app.get("*", (req, res) => {
