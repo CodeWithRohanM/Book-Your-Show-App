@@ -12,7 +12,9 @@ app.use(cors());
 
 let PORT = process.env.PORT || 8080;
 
-
+app.get("/", (req, res)=>{
+    res.send("Heyy");
+})
 
 
 // EndPoint To Save The User Booking Into Database
@@ -31,7 +33,7 @@ app.post("/api/booking", async (req, res) => {
         });
 
         const getData = await insertData.save();
-        return res.status(201).json({ message: `✅ Your Movie "${getMovieName}"` + " Booked Successfully!! ✅" });
+        return res.status(200).json({ message: `✅ Your Movie "${getMovieName}"` + " Booked Successfully!! ✅" });
 
     } catch (err) {
         return res.status(401).json({ error: err });
@@ -48,7 +50,7 @@ app.get("/api/booking", async (req, res) => {
         if (getData.length === 0) {
             return res.status(401).json({ error: "No Previous Booking Found.." });
         } else {
-            return res.status(201).json(getData);
+            return res.status(200).json(getData);
         }
 
     } catch (err) {

@@ -104,7 +104,7 @@ const HomePage = () => {
             const getResponse = await getData.json();
             console.log(getResponse);
 
-            if (getData.status === 201) {
+            if (getData.status === 200) {
                 window.alert(getResponse.message);
                 updateRecentBooking();
                 // getBookingDetails();
