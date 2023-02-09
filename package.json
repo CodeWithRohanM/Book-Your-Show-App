@@ -10,10 +10,7 @@
     "postinstall": "npm run build"
 
   },
-  "engines": {
-    "node": ">=14.0.O",
-    "npm": ">=7.7.0"
- },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
