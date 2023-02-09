@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import siteLogo from "/Users/rohanmote/Desktop/Thapa Projects/Mini Projects/BookMyShow_Capstone/Server/client/build/Images/bookYourShow.png";
+import siteLogo from "/Users/rohanmote/Desktop/Thapa Projects/Mini Projects/BookMyShow_Capstone/Server/client/public/Images/bookYourShow.png";
 
 const Header = () => {
 

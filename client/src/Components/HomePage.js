@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import loadingGif from "/Users/rohanmote/Desktop/Thapa Projects/Mini Projects/BookMyShow_Capstone/Server/client/build/Images/LoadingGif.gif";
-import sorryImage from "/Users/rohanmote/Desktop/Thapa Projects/Mini Projects/BookMyShow_Capstone/Server/client/build/Images/sorry.png";
+import loadingGif from "/Users/rohanmote/Desktop/Thapa Projects/Mini Projects/BookMyShow_Capstone/Server/client/public/Images/LoadingGif.gif";
+import sorryImage from "/Users/rohanmote/Desktop/Thapa Projects/Mini Projects/BookMyShow_Capstone/Server/client/public/Images/sorry.png";
 
 const HomePage = () => {
 
