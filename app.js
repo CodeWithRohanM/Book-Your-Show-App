@@ -61,7 +61,7 @@ app.get("/api/booking", async (req, res) => {
 
 if (process.env.NODE_ENV == "production"){
 
-    app.use(express.static("/client/build"));
+    app.use(express.static("/Users/rohanmote/Desktop/Thapa Projects/Mini Projects/BookMyShow_Capstone/Server/client/build"));
 
     // const path = require("path");
 
