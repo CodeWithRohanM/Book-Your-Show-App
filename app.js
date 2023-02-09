@@ -12,9 +12,9 @@ app.use(cors());
 
 let PORT = process.env.PORT || 8080;
 
-app.get("/", (req, res)=>{
-    res.send("Heyy");
-})
+// app.get("/", (req, res)=>{
+//     res.send("Heyy");
+// })
 
 
 // EndPoint To Save The User Booking Into Database
