@@ -20,12 +20,18 @@ const HomePage = () => {
     const [movieName, setMovieName] = useState(getLocalMovieName);
     const [timeSlot, setTimeSlot] = useState(getLocalTimeSlot);
     const [slots, setSlots] = useState({
-        A1: localStore?.A1 || 0,
-        A2: localStore?.A2 || 0,
-        A3: localStore?.A3 || 0,
-        A4: localStore?.A4 || 0,
-        D1: localStore?.D1 || 0,
-        D2: localStore?.D2 || 0,
+        // A1: localStore?.A1 || 0,
+        // A2: localStore?.A2 || 0,
+        // A3: localStore?.A3 || 0,
+        // A4: localStore?.A4 || 0,
+        // D1: localStore?.D1 || 0,
+        // D2: localStore?.D2 || 0,
+        A1: localStore.A1,
+        A2: localStore.A2,
+        A3: localStore.A3,
+        A4: localStore.A4,
+        D1: localStore.D1,
+        D2: localStore.D2,
     });
 
 
