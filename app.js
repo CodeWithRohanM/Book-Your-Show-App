@@ -12,10 +12,10 @@ app.use(cors());
 
 let PORT = process.env.PORT || 8080;
 
-app.get("/", (req, res, next)=>{
-    //res.send("");
-    next();
-});
+// app.get("/", (req, res, next)=>{
+//     //res.send("");
+//     next();
+// });
 
 
 
@@ -66,7 +66,7 @@ app.get("/api/booking", async (req, res) => {
 
 if (process.env.NODE_ENV == "production"){
 
-    app.use(express.static("/client/build"));
+    app.use(express.static(__dirname+ "/client/build"));
 
 
     // app.get("*", (req, res) => {
