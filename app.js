@@ -75,7 +75,7 @@ if (process.env.NODE_ENV == "production"){
 }
 
 // Listening On PORT To Start The Server
-app.listen(PORT, "0.0.0.0", () => {
+app.listen(process.env.PORT || 8080, "0.0.0.0", () => {
     console.log("Express Server On Fire.. 🔥🔥");
 });
 
