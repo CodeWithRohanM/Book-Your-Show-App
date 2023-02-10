@@ -53,7 +53,7 @@ const HomePage = () => {
         "Sooraj Par Mangal Bhari", "Tenet", "The Personal History Of David Copperfield", "The War With Grandpa", , "Come Play"
     ]);
     const [timeSlotList, setTimeSlotList] = useState(["10:00 AM", "1:00 PM", "3:00 PM", "8:00 PM"]);
-    const [bookingText, setBookingText] = useState("Your Last Booking Details..");
+    const [bookingText, setBookingText] = useState("Your Previous Booking Details..");
 
 
 
@@ -141,7 +141,7 @@ const HomePage = () => {
     const getBookingDetails = async () => {
         setLoader(true);
         setEmptyData(false);
-        setBookingText("Your Recent Booking Details..");
+        setBookingText("Your Previous Booking Details..");
 
         setTimeout(() => {
             setLoader(false);
