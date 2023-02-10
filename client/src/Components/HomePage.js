@@ -20,12 +20,18 @@ const HomePage = () => {
     const [movieName, setMovieName] = useState(getLocalMovieName);
     const [timeSlot, setTimeSlot] = useState(getLocalTimeSlot);
     const [slots, setSlots] = useState({
-        A1: localStore?.A1 || 0,
-        A2: localStore?.A2 || 0,
-        A3: localStore?.A3 || 0,
-        A4: localStore?.A4 || 0,
-        D1: localStore?.D1 || 0,
-        D2: localStore?.D2 || 0,
+        // A1: localStore?.A1 || 0,
+        // A2: localStore?.A2 || 0,
+        // A3: localStore?.A3 || 0,
+        // A4: localStore?.A4 || 0,
+        // D1: localStore?.D1 || 0,
+        // D2: localStore?.D2 || 0,
+        A1: localStore.A1,
+        A2: localStore.A2,
+        A3: localStore.A3,
+        A4: localStore.A4,
+        D1: localStore.D1,
+        D2: localStore.D2,
 
     });
 
@@ -34,7 +40,7 @@ const HomePage = () => {
     // Getting Response From "GET API" and updating the respective States
     const [responseMovieName, setResponseMovieName] = useState("");
     const [responseSlots, setResponseSlots] = useState({});
-    const [responseTimeSlot, setResponseTimeSlot] = useState(""); 
+    const [responseTimeSlot, setResponseTimeSlot] = useState("");
 
 
     // States To Display Different Colour On User Selection Of Movie Name & Time Slot
@@ -132,22 +138,6 @@ const HomePage = () => {
             // Removing Different Colour Button That Used To Display The User Selection When User Selects "Book Now" Button
             setIsActiveMovie(-1);
             setIsActiveTimeSlot(-1);
-
-            //Getting Id's Of Each Input Field To Reset Them To Initial States When User Clicks "Book Now" Button
-            const getTypeA1ID = document.getElementById("typeA1");
-            const getTypeA2ID = document.getElementById("typeA2");
-            const getTypeA3ID = document.getElementById("typeA3");
-            const getTypeA4ID = document.getElementById("typeA4");
-            const getTypeD1ID = document.getElementById("typeD1");
-            const getTypeD2ID = document.getElementById("typeD2");
-
-
-            getTypeA1ID.selectedIndex = 0;
-            getTypeA2ID.selectedIndex = 0;
-            getTypeA3ID.selectedIndex = 0;
-            getTypeA4ID.selectedIndex = 0;
-            getTypeD1ID.selectedIndex = 0;
-            getTypeD2ID.selectedIndex = 0;
         }
     }
 
@@ -255,7 +245,7 @@ const HomePage = () => {
 
                         <div className="flex flex-col gap-y-3 rounded-xl text-center py-3 border-black border-b"
                         >
-                            <h1 id="seatTypes" className="text-xl font-bold border-black border-b">Type A1</h1>
+                            <h1 className="text-xl font-bold border-black border-b">Type A1</h1>
 
                             <input type="number"
                                 className="w-2/5 px-1 py-1 rounded-md text-center items-center container mx-auto  font-bold"
@@ -284,7 +274,7 @@ const HomePage = () => {
 
                         <div className="flex flex-col gap-y-3 rounded-xl text-center py-3 border-black border-b"
                         >
-                            <h1 id="seatTypes" className="text-xl font-bold border-black border-b">Type A2</h1>
+                            <h1 className="text-xl font-bold border-black border-b">Type A2</h1>
 
                             <input type="number"
                                 className="w-2/5 px-1 py-1 rounded-md text-center items-center container mx-auto  font-bold"
@@ -314,7 +304,7 @@ const HomePage = () => {
 
                         <div className="flex flex-col gap-y-3 rounded-xl text-center py-3 border-black border-b"
                         >
-                            <h1 id="seatTypes" className="text-xl font-bold border-black border-b">Type A3</h1>
+                            <h1 className="text-xl font-bold border-black border-b">Type A3</h1>
 
                             <input type="number"
                                 className="w-2/5 px-1 py-1 rounded-md text-center items-center container mx-auto  font-bold"
@@ -343,7 +333,7 @@ const HomePage = () => {
 
                         <div className="flex flex-col gap-y-3 rounded-xl text-center py-3 border-black border-b"
                         >
-                            <h1 id="seatTypes" className="text-xl font-bold border-black border-b">Type A4</h1>
+                            <h1 className="text-xl font-bold border-black border-b">Type A4</h1>
 
                             <input type="number"
                                 className="w-2/5 px-1 py-1 rounded-md text-center items-center container mx-auto  font-bold"
@@ -375,7 +365,7 @@ const HomePage = () => {
 
                         <div className="flex flex-col gap-y-3 rounded-xl text-center  py-3 border-black border-b"
                         >
-                            <h1 id="seatTypes" className="text-xl font-bold border-black border-b">Type D1</h1>
+                            <h1 className="text-xl font-bold border-black border-b">Type D1</h1>
 
                             <input type="number"
                                 className="w-2/5 px-1 py-1 rounded-md text-center items-center container mx-auto font-bold"
@@ -405,7 +395,7 @@ const HomePage = () => {
 
                         <div className="flex flex-col gap-y-3 rounded-xl text-center  py-3 border-black border-b"
                         >
-                            <h1 id="seatTypes" className="text-xl font-bold border-black border-b">Type D2</h1>
+                            <h1 className="text-xl font-bold border-black border-b">Type D2</h1>
 
                             <input type="number"
                                 className="w-2/5 px-1 py-1 rounded-md text-center items-center container mx-auto font-bold"
